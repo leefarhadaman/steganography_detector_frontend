@@ -31,7 +31,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onResult, onError, setLoading, 
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:8000/detect', {
+      const response = await fetch('https://steganography-detector.onrender.com/detect', {
         method: 'POST',
         body: formData,
       });
